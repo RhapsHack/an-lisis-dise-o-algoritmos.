@@ -1,0 +1,51 @@
+1. Preparación (Antes de empezar)
+Coloca al Dinosaurio en la parte izquierda del suelo.
+
+Pon la Puntuación en 0.
+
+Define la Gravedad (una fuerza que siempre empuja hacia abajo).
+
+Define la Velocidad del juego.
+
+2. El Ciclo del Juego (Repetir constantemente)
+Este ciclo se repite muy rápido (aprox. 60 veces por segundo).
+
+Paso A: Aplicar Gravedad
+
+¿El Dinosaurio está en el aire?
+
+Sí: Muévelo un poco hacia abajo.
+
+No (está en el suelo): Déjalo quieto en el eje vertical.
+
+Paso B: Escuchar al Jugador (Saltar)
+
+¿El jugador presionó "Espacio" Y el Dinosaurio está en el suelo?
+
+Sí: Dale un impulso fuerte hacia arriba (velocidad negativa) para que empiece a subir.
+
+Paso C: Mover el Mundo (Cactus)
+
+Toma todos los cactus que existan y muévelos un poco hacia la izquierda (según la velocidad del juego).
+
+¿El cactus salió de la pantalla por la izquierda?
+
+Sí: Bórralo y suma 1 punto.
+
+¿No hay cactus a la vista o están muy lejos?
+
+Sí: Crea un nuevo cactus fuera de la pantalla (a la derecha) para que empiece a acercarse.
+
+Paso D: Comprobar Choques (Game Over)
+
+¿El rectángulo del Dinosaurio está tocando el rectángulo del Cactus?
+
+Sí: Detén el ciclo. Muestra "Game Over".
+
+No: Continúa al siguiente paso.
+
+Paso E: Dibujar
+
+Borra todo lo que había en la pantalla.
+
+Dibuja al Dinosaurio y los Cactus en sus nuevas posiciones.
