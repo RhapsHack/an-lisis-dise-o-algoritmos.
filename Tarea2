@@ -1,0 +1,30 @@
+def calcular_complejidad(codigo):
+    nivel = 0
+    nivel_maximo = 0
+    
+    for linea in codigo.splitlines():
+        
+        if "for " in linea or "while " in linea:
+            nivel += 1
+            if nivel > nivel_maximo:
+                nivel_maximo = nivel  
+                
+        elif "}" in linea and nivel > 0:
+            nivel -= 1
+            
+    if nivel_maximo == 0:
+        return "O(1)"
+    elif nivel_maximo == 1:
+        return "O(n)"
+    else:
+        return f"O(n^{nivel_maximo})"
+
+mi_codigo = """
+for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+        print(i, j);
+    }
+}
+"""
+
+print("La complejidad es:", calcular_complejidad(mi_codigo))
